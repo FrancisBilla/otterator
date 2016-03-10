@@ -1,11 +1,23 @@
 package moorhouse{
   object Otter 
   {//jgs' otter, thanks
-    val o,`t.t`,e,r = "otter"
-    //val f = 'o' << otter.length
-      //bubble pointer starts at char 18\
-      //line wrap at 60?
-      val otter = """
+    val (o,t,e,r,oter) = (32,18,2,65,10)
+    val `t.t` = 50
+    val `)` = "( "
+    val `++` = " )"
+    implicit class otterator(val `::`: String) {
+      def otterate = {
+        `::`.foldLeft(0)((`_`, _) => `_`.+(1)) match{
+          case l if (l <= o) => " " * (t - l/e)  + `)` + `::` + `++`
+          case l if (l <= r) => `)` + `::` + `++`
+          case l =>{
+            lazy val oterr : String => String = (s: String) => s.splitAt(`t.t`) match{
+              case (l, ls) => `)` + l + `++` + oter.toChar + (if(ls == "") oterr(ls) else "")
+            }
+            oterr(`::`)
+          }
+        }
+      } + """
                   |  /
         .-"'"-.   | /
        /      o\  |/
@@ -18,29 +30,6 @@ package moorhouse{
              '._        -'    /
                 ``""--`------`
 """ // 282 chars
-    implicit class otterator(val str: String) extends AnyVal {
-      
-      def otterate = tokenize(str) + otter
-      def tokenize(s:String) = {
-        val length = s.length
-        length match{
-          case l if (l <= 32) =>{
-            val lpad = " " * (18 - l/2) 
-            lpad + "( " + s + " )"
-          }
-          case l if (l <= 65) => {
-            "( " + s + " )"
-          }
-          case l =>{
-            val lines = l / 50
-            def split (n: String): String = n.splitAt(50) match{
-              case (l, "") => "( " + l + " )\n"
-              case (l, ls) => "( " + l + " )\n" + split(ls)
-            }
-            split(s)
-          }
-        }
-      }
     }
     
   }
