@@ -1,4 +1,4 @@
-package moorhouse{
+package moorhouse{ //https://littleplasticsquares.com/2016/03/12/otterator/
 	package _o{package t{package t{package e{object r{val `)` = "( "}}}}}  
 	object Otter
 	{
@@ -67,7 +67,7 @@ package moorhouse{
           case l =>{
           	lazy val oterr : String => String = splitAt => splitAt.splitAt(`t.t`) match{
           	  case (l, ls) => _o.t.t.e.r.`)` + l + `++` + 
-                (if(ls == "") "" else toChar.toChar +  oterr(ls))
+                (if(ls == "") "" else toChar.toChar + oterr(ls))
           	}
   	        oterr(`::`)
           }
