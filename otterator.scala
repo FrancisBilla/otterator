@@ -61,7 +61,7 @@ package moorhouse{ //https://littleplasticsquares.com/2016/03/12/otterator/
   	val `t.t` = 50
   	val `++` = " )"
   	implicit class otterator(val `::`: String) {
-  		def otterate = { `::`./:(0)((`_`, _) => `_`.+(two)) match{
+  		def 獺 = { `::`./:(0)((`_`, _) => `_`.+(two)) match{
   				case ott if (ott <= oo) => " " * (t - ott/e)  + _o.t.t.e.r.`)` + `::` + `++`
           case er if (er <= r) => _o.t.t.e.r.`)` + `::` + `++`
           case l =>{
